@@ -1,0 +1,464 @@
+/* -------- BASIC PAGE STYLE -------- */
+.skip {
+  position: absolute;
+  left: -9999px; 
+  top: -65px;
+  padding: 6px 12px;
+  background-color: #00274C;
+  color: #FFCB05;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip:focus {
+     
+  left: 0;           
+  right: 0;           
+  top: 10px;           
+  width: auto;   
+  max-width: 90%;       
+  text-align: center;   
+}
+
+body {
+    background-color: #faf5e6; 
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+nav ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; 
+  margin-right: 20px; 
+}
+
+
+/* -------- SMALL ICON IMAGE MENU -------- */
+.image-menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 0;
+    background-color: #f7dfd6;
+    border-bottom: 3px solid #c59a89;
+    grid-column: 1 / span 5;
+}
+
+.image-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.image-menu li:first-child {
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+    color: #55372d;
+    width: 110px;
+
+}
+
+
+
+.menu-item img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    
+    transition: transform 0.2s ease;
+}
+
+.menu-item span {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* -------- HERO SECTION (photo + text) -------- */
+.hero-section {
+    display: flex;
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / span 5;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;       
+    border: 5px solid #e8c4b8;
+    background: #fff;
+}
+
+.headline {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    margin: 0 0 10px 0;
+    color: #b14a3b;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* -------- DESSERT GRID -------- */
+.dessert-grid {
+    grid-column-start: 1/ span 5;
+    display: contents;  
+}
+
+
+.dessert-card-cheesecake{
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #55372d;
+    transition: transform 0.2s ease;
+    grid-column: 2;
+}
+
+.dessert-card-cheesecake:hover {
+    transform: scale(1.03);
+}
+
+.dessert-card-cheesecake img {
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.dessert-card-cheesecake p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.dessert-card-chocoflan{
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #55372d;
+    transition: transform 0.2s ease;
+    grid-column: 3;
+}
+
+.dessert-card-chocoflan:hover {
+    transform: scale(1.03);
+}
+
+.dessert-card-chocoflan img {
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.dessert-card-chocoflan p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.dessert-card-coconut{
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #55372d;
+    transition: transform 0.2s ease;
+    grid-column: 4;
+}
+
+.dessert-card-coconut:hover {
+    transform: scale(1.03);
+}
+
+.dessert-card-coconut img {
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.dessert-card-coconut p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+/* Shuffle animation (quick shake) */
+.shuffle {
+    animation: shuffleAnim 0.4s ease;
+}
+
+.shuffle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.shuffle-box {
+    width: fit-content;
+    margin: 40px auto; 
+    text-align: center;
+}
+
+.random-dessert {
+    grid-column: 1 / span 5;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.random-dessert h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    color: #b14a3b;
+    margin-bottom: 20px;
+}
+
+#generate-btn {
+    background-color: #f7dfd6;
+    color: #55372d;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border: 3px solid #e8c4b8;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#generate-btn:hover {
+    background-color: #e8c4b8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#generate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+    margin-top: 30px;
+}
+
+#result.hidden {
+    display: none;
+}
+
+#dessert-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#dessert-name {
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    color: #b14a3b;
+    margin: 10px 0;
+}
+
+#dessert-desc {
+    font-size: 16px;
+    color: #55372d;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.recipe-header {
+    grid-column: 1 / span 5;
+    text-align: center;
+    padding: 40px 20px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recipe-intro {
+    font-size: 20px;
+    color: #55372d;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.recipe-source {
+    font-size: 18px;
+    font-style: italic;
+    color: #55372d;
+    margin: 10px 0 20px;
+}
+
+.recipe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f7dfd6;
+    border-radius: 10px;
+}
+
+.meta-item {
+    font-size: 16px;
+    color: #55372d;
+}
+
+.meta-item strong {
+    color: #8b2e1f;
+}
+
+.recipe-content {
+    grid-column: 2 / span 3;
+    padding: 40px 20px;
+}
+
+.recipe-content h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    color: #b14a3b;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ingredient-group,
+.instruction-group {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-group h3,
+.instruction-group h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #8b2e1f;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e8c4b8;
+    padding-bottom: 10px;
+}
+
+.ingredient-group ul,
+.instruction-group ol {
+    line-height: 1.8;
+    color: #55372d;
+}
+
+.ingredient-group li,
+.instruction-group li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.instruction-group ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+.instruction-group ol li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+}
+
+.instruction-group ol li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f7dfd6;
+    color: #8b2e1f;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+.tips-section {
+    grid-column: 2 / span 3;
+    padding: 0 20px 40px;
+}
+
+.tips-section h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    color: #b14a3b;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tip-box {
+    background-color: #ffffff;
+    border-left: 4px solid #b14a3b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.tip-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #8b2e1f;
+    margin-bottom: 10px;
+}
+
+.tip-box p {
+    color: #55372d;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+@keyframes shuffleAnim {
+    0% { transform: rotate(-3deg) scale(1); }
+    25% { transform: rotate(3deg) scale(1.02); }
+    50% { transform: rotate(-3deg) scale(1.03); }
+    75% { transform: rotate(3deg) scale(1.02); }
+    100% { transform: rotate(0deg) scale(1); }
+}
