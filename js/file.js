@@ -11,9 +11,16 @@ const btn = document.getElementById("generate-btn");
 const resultBox = document.getElementById("result");
 const dessertName = document.getElementById("dessert-name");
 const dessertDesc = document.getElementById("dessert-desc");
-const dessertImg = document.getElementById("dessert-img");
 
 btn.addEventListener("click", () => {
+    let dessertImg = document.getElementById("dessert-img");
+    if (!dessertImg) {
+        dessertImg = document.createElement("img");
+        dessertImg.id = "dessert-img";
+        dessertImg.alt = "Dessert result";
+        resultBox.insertBefore(dessertImg, dessertName);
+    }
+
     dessertImg.classList.add("shuffle");
     setTimeout(() => dessertImg.classList.remove("shuffle"), 400);
 

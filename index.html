@@ -6,91 +6,75 @@
     <title>My Favorite Things I Baked</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
-
-
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@400;600&family=Sacramento&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-
 <nav class="image-menu">
     <ul>
         <li class="current">
             <a href="index.html" class="menu-item">
-                <img src="images/baking.png" alt="Wisk, spatula, and wodee">
-      
-                
+                <img src="images/baking.png" alt="Illustration of wisk, spatula, and wooden spoon tied in a pink bow">
             </a>
         </li>
-
-         <li>
+        <li>
             <a href="cheesecake.html" class="menu-item">
-                <img src="images/cheesecake.png" alt="Cheesecake">
+                <img src="images/cheesecake.png" alt="Illustration of Cheesecake slice">
                 <span>Cheesecake</span>
             </a>
         </li>
-
         <li>
             <a href="chocoflan.html" class="menu-item">
-                <img src="images/chocoflan.png" alt="Chocoflan">
+                <img src="images/chocoflan.png" alt="Illustration of Chocoflan slice">
                 <span>Chocoflan</span>
             </a>
         </li>
-
         <li>
             <a href="coconut.html" class="menu-item">
-                <img src="images/coconutcreampie.png" alt="Coconut Cream Pie">
+                <img src="images/coconutcreampie.png" alt="Illustration of Coconut Cream Pie slice">
                 <span>Coconut Cream Pie</span>
             </a>
         </li>
     </ul>
 </nav>
 
-<!-- MAIN HEADER SECTION -->
-<header class="hero-section">
-    <div class="hero-image">
-        <img src="images/me.jpg" alt="Photo of Sabrena Chedid smiling outdoors">
+<main>
+    <header class="hero-section">
+        <div class="hero-image">
+            <img src="images/me.jpg" alt="Photo of Sabrena Chedid smiling outdoors">
+        </div>
+        <div class="hero-text">
+            <h1 class="headline">My Favorite Things That I Baked!</h1>
+            <p>
+                Hi!!! My name is Sabrena Chedid and I LOVEEE to bake. I am a self-taught baker who has been baking since I was around 9 years old. I had a dream of becoming a pastry chef when I was younger but now I am a UX designer haha! I still make time for baking even when I am knee deep into finals… The goal of this website is to introduce you to the types of desserts that I made so you don't feel too left out…  I hope that you will also get a chance to have a bit of my desserts!
+            </p>
+        </div>
+    </header>
+
+    <div class="dessert-cards">
+        <a href="cheesecake.html" class="dessert-card-cheesecake">
+            <img src="images/cheesecake.png" alt="Illustration of a plain cheesecake slice">
+            <p>A creamy and rich classic with a buttery graham cracker crust. Smooth, simple, and always a crowd and family favorite.</p>
+        </a>
+        <a href="chocoflan.html" class="dessert-card-chocoflan">
+            <img src="images/chocoflan.png" alt="Illustration of a chocoflan slice">
+            <p>A magical two-layer dessert where silky flan meets moist chocolate cake. They bake together into one perfect slice.</p>
+        </a>
+        <a href="coconut.html" class="dessert-card-coconut">
+            <img src="images/coconutcreampie.png" alt="Illustration of a coconut cream pie slice">
+            <p>A light and velvety coconut custard topped with fluffy whipped cream and toasted flakes for a gentle tropical touch.</p>
+        </a>
     </div>
 
-    <div class="hero-text">
-        <h1 class="headline">My Favorite Things That I Baked!</h1>
-        <p>
-            Hi!!! My name is Sabrena Chedid and I LOVEEE to bake. I am a self-taught baker who has been baking since I was around 9 years old. I had a dream of becoming a pastry chef when I was younger but now I am a UX designer haha! I still make time for baking even when I am knee deep into finals… The goal of this website is to introduce you to the types of desserts that I made so you don’t feel too left out…  I hope that you will also get a chance to have a bit of my desserts!
-        </p>
-    </div>
-</header>
+    <section class="random-dessert">
+        <h2>What should I bake next?</h2>
+        <button id="generate-btn">Pick a Dessert</button>
+        <div id="result" class="hidden">
+            <h3 id="dessert-name">Dessert Name</h3>
+            <p id="dessert-desc"></p>
+        </div>
+    </section>
+</main>
 
-<!-- DESSERT CARDS (direct children of body grid) -->
-<a href="cheesecake.html" class="dessert-card-cheesecake">
-    <img src="images/cheesecake.png" alt="Illustration of a plain cheesecake slice">
-    <p>A creamy and rich classic with a buttery graham cracker crust. Smooth, simple, and always a crowd and family favorite.</p>
-</a>
-
-<a href="chocoflan.html" class="dessert-card-chocoflan">
-    <img src="images/chocoflan.png" alt="Illustration of a chocoflan slice">
-    <p>A magical two-layer dessert where silky flan meets moist chocolate cake. They bake together into one perfect slice.</p>
-</a>
-
-<a href="coconut.html" class="dessert-card-coconut">
-    <img src="images/coconutcreampie.png" alt="Illustration of a coconut cream pie slice">
-    <p>A light and velvety coconut custard topped with fluffy whipped cream and toasted flakes for a gentle tropical touch.</p>
-</a>
-
-<!-- RANDOM DESSERT SECTION -->
-<section class="random-dessert">
-    <h2>What should I bake next?</h2>
-
-    <button id="generate-btn">Pick a Dessert</button>
-
-    <div id="result" class="hidden">
-        <img id="dessert-img" src="" alt="Dessert result">
-        <h3 id="dessert-name"></h3>
-        <p id="dessert-desc"></p>
-    </div>
-</section>
-
- <script src="js/file.js"></script>
-
+<script src="js/file.js"></script>
 </body>
 </html>

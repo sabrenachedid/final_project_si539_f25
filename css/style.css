@@ -25,6 +25,10 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+
+main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -51,7 +55,7 @@ nav ul li {
     padding: 10px 0;
     background-color: #f7dfd6;
     border-bottom: 3px solid #c59a89;
-    grid-column: 1 / span 5;
+    /* grid-column: 1 / span 5; REMOVE THIS LINE */
 }
 
 .image-menu ul {
@@ -137,8 +141,8 @@ nav ul li {
 }
 
 /* -------- DESSERT GRID -------- */
-.dessert-grid {
-    grid-column-start: 1/ span 5;
+.dessert-cards {
+    grid-column: 1 / span 5;
     display: contents;  
 }
 
@@ -455,6 +459,10 @@ nav ul li {
     margin: 0;
 }
 
+#result.hidden h3 {
+  visibility: hidden;
+}
+
 @keyframes shuffleAnim {
     0% { transform: rotate(-3deg) scale(1); }
     25% { transform: rotate(3deg) scale(1.02); }
@@ -462,3 +470,4 @@ nav ul li {
     75% { transform: rotate(3deg) scale(1.02); }
     100% { transform: rotate(0deg) scale(1); }
 }
+
