@@ -1,4 +1,3 @@
-/* -------- BASIC PAGE STYLE -------- */
 .skip {
   position: absolute;
   left: -9999px; 
@@ -47,7 +46,7 @@ nav ul li {
 }
 
 
-/* -------- SMALL ICON IMAGE MENU -------- */
+
 .image-menu {
     display: flex;
     justify-content: center;
@@ -55,7 +54,6 @@ nav ul li {
     padding: 10px 0;
     background-color: #f7dfd6;
     border-bottom: 3px solid #c59a89;
-    /* grid-column: 1 / span 5; REMOVE THIS LINE */
 }
 
 .image-menu ul {
@@ -80,7 +78,9 @@ nav ul li {
     text-decoration: none;
     color: #55372d;
     width: 110px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -104,7 +104,6 @@ nav ul li {
     transform: scale(1.1);
 }
 
-/* -------- HERO SECTION (photo + text) -------- */
 .hero-section {
     display: flex;
     padding: 40px 20px;
@@ -140,7 +139,7 @@ nav ul li {
     line-height: 1.6;
 }
 
-/* -------- DESSERT GRID -------- */
+
 .dessert-cards {
     grid-column: 1 / span 5;
     display: contents;  
@@ -223,7 +222,7 @@ nav ul li {
 
 
 
-/* Shuffle animation (quick shake) */
+
 .shuffle {
     animation: shuffleAnim 0.4s ease;
 }
@@ -471,3 +470,109 @@ nav ul li {
     100% { transform: rotate(0deg) scale(1); }
 }
 
+@media (max-width: 824px) {
+    .image-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .image-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: static;
+    }
+
+    .image-menu li:first-child {
+        position: static;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .headline {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+
+    .dessert-card-cheesecake,
+    .dessert-card-chocoflan,
+    .dessert-card-coconut {
+        grid-column: 1 / span 5;
+    }
+
+ .dessert-card-cheesecake img,
+.dessert-card-chocoflan img,
+.dessert-card-coconut img {
+    width: 80%;
+    max-width: 250px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+    .recipe-content {
+        grid-column: 1 / span 5;
+        padding: 20px;
+    }
+
+    .recipe-content h2 {
+        font-size: 28px;
+    }
+
+    .ingredient-group h3,
+    .instruction-group h3 {
+        font-size: 20px;
+    }
+
+    .ingredient-group li,
+    .instruction-group li {
+        font-size: 16px;
+    }
+
+
+    .tips-section {
+        grid-column: 1 / span 5;
+        padding: 0 20px 40px;
+    }
+
+    .tips-section h2 {
+        font-size: 28px;
+    }
+
+    .tip-box h4 {
+        font-size: 18px;
+    }
+
+
+    .recipe-intro {
+        font-size: 18px;
+    }
+
+    .recipe-source {
+        font-size: 16px;
+    }
+
+    .meta-item {
+        font-size: 14px;
+    }
+
+    .recipe-meta {
+        gap: 15px;
+    }
+}
