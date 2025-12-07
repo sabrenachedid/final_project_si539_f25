@@ -462,6 +462,20 @@ nav ul li {
   visibility: hidden;
 }
 
+.dessert-card-cheesecake p,
+.dessert-card-chocoflan p,
+.dessert-card-coconut p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#dessert-desc {
+    font-size: 18px;
+    color: #55372d;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 @keyframes shuffleAnim {
     0% { transform: rotate(-3deg) scale(1); }
     25% { transform: rotate(3deg) scale(1.02); }
